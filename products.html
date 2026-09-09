@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASORIN | کاڵاکان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Noto+Sans+SC:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo"><span class="mark"><span>A</span></span><span lang-target="brand">ئاسۆرین</span></a>
+    <nav class="links">
+      <a href="index.html" lang-target="nav_home">سەرەکی</a>
+      <a href="products.html" class="current" lang-target="nav_products">کاڵاکان</a>
+      <a href="chat.html" lang-target="nav_chat">چات</a>
+      <a href="settings.html" lang-target="nav_settings">ڕێکخستن</a>
+      <a href="about.html" lang-target="nav_about">دەربارە</a>
+    </nav>
+    <div class="nav-actions">
+      <select class="lang-select" id="langSelect" aria-label="Language">
+        <option value="ckb">کوردی</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="zh">中文</option>
+      </select>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close">✕</button>
+    <a href="index.html" lang-target="nav_home">سەرەکی</a>
+    <a href="products.html" class="current" lang-target="nav_products">کاڵاکان</a>
+    <a href="chat.html" lang-target="nav_chat">چات</a>
+    <a href="settings.html" lang-target="nav_settings">ڕێکخستن</a>
+    <a href="about.html" lang-target="nav_about">دەربارە</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="band-label" lang-target="lbl_products">کاڵاکان</div>
+      <h1 lang-target="prod_page_title">کاڵاکانمان</h1>
+      <p lang-target="prod_page_sub">هەموو کاڵاکانی تۆمارکراو، دابەشکراو بەسەر دوو بەشی سەرەکیدا.</p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="cat-tabs">
+        <button class="cat-tab active" data-cat="all"><span class="sw" style="background:var(--ink)"></span><span lang-target="cat_all">هەموو</span></button>
+        <button class="cat-tab" data-cat="electronics"><span class="sw"></span><span lang-target="cat_elec">ئەلیکترۆنی</span></button>
+        <button class="cat-tab" data-cat="food"><span class="sw"></span><span lang-target="cat_food">خۆراک</span></button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 ASORIN</span>
+    <div class="footer-links">
+      <a href="index.html" lang-target="nav_home">سەرەکی</a>
+      <a href="chat.html" lang-target="nav_chat">چات</a>
+      <a href="about.html" lang-target="nav_about">دەربارە</a>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+9647702624422" dir="ltr">0770 262 4422</a>
+      <a href="tel:+9647502624422" dir="ltr">0750 262 4422</a>
+    </div>
+    <span class="mono" lang-target="footer_note">GENERAL TRADING · LOGISTICS · INDUSTRIAL SOLUTIONS</span>
+  </div>
+</footer>
+
+<div class="fab-stack">
+  <a href="chat.html" class="fab chat" aria-label="Chat">💬</a>
+  <a href="https://wa.me/9647702624422" target="_blank" rel="noopener" class="fab wa" aria-label="WhatsApp">📞</a>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-body">
+      <button class="close-x" id="closeModal">✕</button>
+      <span class="badge" id="modalBadge"></span>
+      <h3 id="modalTitle"></h3>
+      <p class="code mono" id="modalCode"></p>
+      <p class="desc" id="modalDesc"></p>
+      <div class="modal-actions">
+        <a href="chat.html" id="modalChatBtn" class="btn btn-gold" lang-target="modal_chat">چات لەسەر ئەم کاڵایە</a>
+        <a href="https://wa.me/9647702624422" target="_blank" rel="noopener" class="btn btn-outline" lang-target="modal_wa">وەڵام لە واتساپ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
