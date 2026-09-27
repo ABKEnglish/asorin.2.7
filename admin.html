@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASORIN | ئادمین</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      <span class="mark">A</span>
+      <div><b>ئاسۆرین</b><span>بەڕێوەبەرایەتی</span></div>
+    </div>
+    <nav class="admin-nav">
+      <button class="admin-tab active" data-panel="products" data-title="کاڵاکان">📦 کاڵاکان</button>
+      <button class="admin-tab" data-panel="users" data-title="بەکارهێنەران">👥 بەکارهێنەران</button>
+    </nav>
+    <a href="index.html" class="admin-back">← گەڕانەوە بۆ وێبسایت</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 id="adminPageTitle">کاڵاکان</h1>
+      <p>لێرەوە کاڵا تۆمار بکە و ئەژمارەکان بەڕێوە ببە.</p>
+    </div>
+
+    <div class="admin-stats" id="adminStats"></div>
+
+    <!-- ============ PRODUCTS PANEL ============ -->
+    <div class="admin-panel active" id="panel-products">
+      <div class="admin-form-card">
+        <div class="admin-section-title">تۆمارکردنی کاڵای نوێ</div>
+        <form id="productForm">
+          <div class="field-group">
+            <label class="field-label">وێنەی کاڵا</label>
+            <label class="file-drop" id="fileDrop">
+              <span id="fileDropText">کلیک بکە بۆ هەڵبژاردنی وێنە</span>
+              <img id="filePreview" style="display:none;">
+              <input type="file" id="productImage" accept="image/*" style="display:none;">
+            </label>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label">ناوی کاڵا</label>
+              <input type="text" class="field-input" id="productName" required placeholder="بۆ نموونە: هێدفۆنی بێ وایەر">
+            </div>
+            <div class="field-group">
+              <label class="field-label">بەش</label>
+              <select class="field-select" id="productCat">
+                <option value="electronics">ئەلیکترۆنی</option>
+                <option value="food">خۆراک</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label">دەربارەی کاڵا</label>
+            <textarea class="field-textarea" id="productDesc" required placeholder="وردەکاری کاڵاکە بنووسە..."></textarea>
+          </div>
+          <div class="field-group">
+            <label class="field-label">کۆدی کاڵا (ئارەزوومەندانە)</label>
+            <input type="text" class="field-input" id="productCode" placeholder="بۆ نموونە: ELC-2001">
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button type="submit" class="btn btn-primary" id="productSubmitBtn">زیادکردنی کاڵا</button>
+            <button type="button" class="btn btn-outline" id="productCancelBtn" style="display:none;">پاشگەزبوونەوە</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="admin-list-card">
+        <div class="admin-section-title">کاڵا تۆمارکراوەکان</div>
+        <div id="adminProductList"></div>
+      </div>
+    </div>
+
+    <!-- ============ USERS PANEL ============ -->
+    <div class="admin-panel" id="panel-users">
+      <div class="admin-list-card">
+        <div class="admin-section-title">ئەژمارە تۆمارکراوەکان</div>
+        <div id="userList"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

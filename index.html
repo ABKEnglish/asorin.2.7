@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASORIN | سەرەکی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&family=Noto+Sans+SC:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="index.html" class="logo"><span class="mark"><span>A</span></span><span lang-target="brand">ئاسۆرین</span></a>
+    <nav class="links">
+      <a href="index.html" class="current" lang-target="nav_home">سەرەکی</a>
+      <a href="products.html" lang-target="nav_products">بوار و چالاکییەکان</a>
+      <a href="settings.html" lang-target="nav_settings">ڕێکخستن</a>
+      <a href="about.html" lang-target="nav_about">دەربارە</a>
+    </nav>
+    <div class="nav-actions">
+      <select class="lang-select" id="langSelect" aria-label="Language">
+        <option value="ckb">کوردی</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="zh">中文</option>
+      </select>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close">✕</button>
+    <a href="index.html" class="current" lang-target="nav_home">سەرەکی</a>
+    <a href="products.html" lang-target="nav_products">بوار و چالاکییەکان</a>
+    <a href="settings.html" lang-target="nav_settings">ڕێکخستن</a>
+    <a href="about.html" lang-target="nav_about">دەربارە</a>
+  </div>
+
+<main>
+  <section id="home-hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="band-label" lang-target="lbl_home">سەرەکی</div>
+        <h1 lang-target="hero_title">بەخێربێن بۆ<br><span class="accent">کۆمپانیای ئاسۆرین</span></h1>
+        <p class="sub" lang-target="hero_sub">ئاسۆرین کۆمپانیایەکی بازرگانی و لۆجیستیی نێودەوڵەتییە، چالاک لە بازرگانی گشتی، زنجیرەی دابینکردن، چارەسەری پیشەسازی، و دابینکردنی ستراتیژی بۆ تەندەر.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="products.html" class="btn btn-gold" lang-target="cta_shop">بوارەکانی کارمان ببینە</a>
+          <a href="about.html" class="btn btn-outline-light" lang-target="cta_about">زیاتر بزانە</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-row" style="border:none; padding-bottom:12px;"><b style="font-family:inherit; font-size:0.98rem;" lang-target="hv_title">بوارە سەرەکییەکانمان</b></div>
+        <div class="hero-visual-row"><span lang-target="p1_title">بازرگانی گشتی و دابینکردنی نێودەوڵەتی</span></div>
+        <div class="hero-visual-row"><span lang-target="p2_title">خزمەتگوزارییە لۆجیستییەکان و زنجیرەی دابینکردن</span></div>
+        <div class="hero-visual-row"><span lang-target="p3_title">پڕۆژە و ڕێکارە پیشەسازییە تەواوکارەکان</span></div>
+        <div class="hero-visual-row" style="border:none;"><span lang-target="p4_title">دابینکردنی پێداویستییە ستراتیژییەکان بۆ کەرتی گشتی و تایبەت</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 ASORIN</span>
+    <div class="footer-links">
+      <a href="products.html" lang-target="nav_products">بوار و چالاکییەکان</a>
+      <a href="about.html" lang-target="nav_about">دەربارە</a>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+9647702624422" dir="ltr">0770 262 4422</a>
+      <a href="tel:+9647502624422" dir="ltr">0750 262 4422</a>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-stack">
+  <a href="https://wa.me/9647702624422" target="_blank" rel="noopener" class="fab wa" aria-label="WhatsApp">📞</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
